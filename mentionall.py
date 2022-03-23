@@ -37,12 +37,11 @@ async def start(event):
   await event.reply("**Tagger botu**, Grup veya kanaldaki neredeyse tüm üyelerden bahsedebilirim ★\nDaha fazla bilgi için **/bilgi**'i tıklayın.",
                     buttons=(
                       [
-                         Button.url('➕ BENİ GRUBA EKLE ➕ ', 'http://t.me/SessiztaggerBot?startgroup=a')
+                         Button.url('➕ BENİ GRUBA EKLE ➕ ', 'http://t.me/herlocktag_bot?startgroup=a')
                       ],
                       [
-                         Button.url('📣 Grubumuz', 'https://t.me/HerlockSupport1'),
+                         Button.url('📣 Grubumuz', 'https://t.me/ggold1'),
                          Button.url('👨🏼‍💻Developer', 'https://t.me/SakirBey2'),
-                         Button.url('🙋Sahibim', 'https://t.me/sessizlerkurucu'),
                       ]
                     ),
                     link_preview=False
@@ -53,12 +52,11 @@ async def help(event):
   await event.reply(helptext,
                     buttons=(
                       [
-                         Button.url('➕ BENİ GRUBA EKLE ➕', 'http://t.me/SessiztaggerBot?startgroup=a')
+                         Button.url('➕ BENİ GRUBA EKLE ➕', 'http://t.me/herlocktag_bot?startgroup=a')
                       ],
                       [
                          Button.url('📣 Grubumuz', 'https://t.me/HerlockSupport1'),
                          Button.url('👨🏼‍💻Developer', 'https://t.me/SakirBey2'),
-                         Button.url('🙋🏻‍♂️Sahibim', 'https://t.me/sessizlerkurucu'),
                       ]
                     ),
                     link_preview=False
@@ -124,7 +122,7 @@ async def mentionall(event):
         usrnum = 0
         usrtxt = ""
 
-# Emoji Modulu (aykhan_s)
+# SakirBey1 DeveLoper .xd
 @client.on(events.NewMessage(pattern="^/itag ?(.*)"))
 async def etag(event):
   global anlik_calisan
