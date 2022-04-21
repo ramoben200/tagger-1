@@ -4,6 +4,8 @@ from telethon import Button
 from telethon import TelegramClient, events
 from telethon.sessions import StringSession
 from telethon.tl.types import ChannelParticipantsAdmins
+from aiohttp import ClientSession
+from pyrogram import Client, filters, idle
 
 logging.basicConfig(
     level=logging.INFO,
@@ -300,6 +302,13 @@ async def mentionall(event):
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
-
+        
+        
+@client.on_message(filters.command("bagis") & ~filters.edited)
+async def start(_, message):
+    await luna.send_chat_action(message.chat.id, "typing")
+    await sleep(2)
+    await message.reply_text("Bağış mı yapmak istiyorsun bu heyecan verici \nBağış için Sahibim @SakirBey1 yazabilrsin")
+    
 print(">> Bot çalıyor merak etme 🚀 @SakirBey1 bilgi alabilirsin <<")
 client.run_until_disconnected()
