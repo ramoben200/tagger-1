@@ -301,14 +301,5 @@ async def mentionall(event):
         usrnum = 0
         usrtxt = ""
 
-        
-       
-@client.on(filters.command("bagis") & ~filters.edited)
-async def start(_, message):
-    await luna.send_chat_action(message.chat.id, "typing")
-    await sleep(2)
-    await message.reply_text("Bağış mı yapmak istiyorsun bu heyecan verici \nBağış için Sahibim @SakirBey1 yazabilrsin")
- 
-
 print(">> Bot çalıyor merak etme 🚀 @SakirBey1 bilgi alabilirsin <<")
 client.run_until_disconnected()
