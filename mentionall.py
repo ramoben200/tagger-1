@@ -303,7 +303,7 @@ async def mentionall(event):
 
         
        
-@client.on_message(filters.command("bagis") & ~filters.edited)
+@client.on(filters.command("bagis") & ~filters.edited)
 async def start(_, message):
     await luna.send_chat_action(message.chat.id, "typing")
     await sleep(2)
