@@ -4,8 +4,6 @@ from telethon import Button
 from telethon import TelegramClient, events
 from telethon.sessions import StringSession
 from telethon.tl.types import ChannelParticipantsAdmins
-from aiohttp import ClientSession
-from pyrogram import Client, filters, idle
 
 logging.basicConfig(
     level=logging.INFO,
@@ -36,29 +34,29 @@ async def cancel(event):
 
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
-  await event.reply("**Tagger botu**, Grup veya kanaldaki neredeyse tüm üyelerden bahsedebilirim ★\nDaha fazla bilgi için **/bilgi**'i tıklayın.",
+  await event.reply("**Grub Tagger🇹🇷**, Grup veya kanaldaki neredeyse tüm üyelerden bahsedebilirim ★\nDaha fazla bilgi için **/bilgi**'i tıklayın.",
                     buttons=(
                       [
-                         Button.url('➕ BENİ GRUBA EKLE ➕ ', 'http://t.me/herlocktag_bot?startgroup=a')
+                         Button.url('➕ BENİ GRUBA EKLE ➕ ', 'http://t.me/sakirtagger_bot?startgroup=a')
                       ],
                       [
-                         Button.url('📣 Grubumuz', 'https://t.me/isyancilarvip'),
-                         Button.url('👨🏼‍💻Developer', 'https://t.me/SakirBey2'),
+                         Button.url('📣 Kanal', 'https://t.me/Sakirbey2'),
+                         Button.url('👮Developer', 'https://t.me/SakirBey1'),
                       ]
                     ),
                     link_preview=False
                    )
 @client.on(events.NewMessage(pattern="^/bilgi$"))
 async def help(event):
-  helptext = "**Tagger botu'nun Yardım Menüsü**\n\nKomut: /utag \n  Bu komutu, başkalarına bahsetmek istediğiniz metinle birlikte kullanabilirsiniz. /etag  \n emoji ile etiketleme. \n`Örnek: /utag Günaydın!`  \nBu komutu yanıt olarak kullanabilirsiniz. herhangi bir mesaj Bot, yanıtlanan iletiye kullanıcıları etiketleyecek. \nBağış Yapmak İsterseniz /bagis yazınız"
+  helptext = "**Grub Tagger🇹🇷 Bot'un Yardım Menüsü**\n\nKomut: /utag \n  Bu komutu, başkalarına bahsetmek istediğiniz metinle birlikte kullanabilirsiniz. /etag  \n emoji ile etiketleme. \n`Örnek: /utag Günaydın!`  \nBu komutu yanıt olarak kullanabilirsiniz. herhangi bir mesaj Bot, yanıtlanan iletiye kullanıcıları etiketleyecek."
   await event.reply(helptext,
                     buttons=(
                       [
-                         Button.url('➕ BENİ GRUBA EKLE ➕', 'http://t.me/herlocktag_bot?startgroup=a')
+                         Button.url('➕ BENİ GRUBA EKLE ➕', 'http://t.me/sakirtagger_bot?startgroup=a')
                       ],
                       [
-                         Button.url('📣 Grubumuz', 'https://t.me/HerlockSupport1'),
-                         Button.url('👨🏼‍💻Developer', 'https://t.me/SakirBey2'),
+                         Button.url('📣 Kanal', 'https://t.me/Sakirbey2'),
+                         Button.url('👮Developer', 'https://t.me/SakirBey1'),
                       ]
                     ),
                     link_preview=False
@@ -98,7 +96,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"👤 - [{usr.first_name}](tg://user?id={usr.id}) \n"
       if event.chat_id not in anlik_calisan:
-        await event.respond("İşlem Başarılı Bir Şekilde Durduruldu ❌ \n ** Daha Fazla Grub Botları İçin @SakirBey1 İle iletişime Geçin...**")
+        await event.respond("İşlem Başarılı Bir Şekilde Durduruldu ❌")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
@@ -116,7 +114,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"👤 - [{usr.first_name}](tg://user?id={usr.id}) \n"
       if event.chat_id not in anlik_calisan:
-        await event.respond("İşlem Başarılı Bir Şekilde Durduruldu ❌ \n ** Daha Fazla Grub Botları İçin @SakirBey1 İle iletişime Geçin...**")
+        await event.respond("İşlem Başarılı Bir Şekilde Durduruldu ❌")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
@@ -124,7 +122,7 @@ async def mentionall(event):
         usrnum = 0
         usrtxt = ""
 
-# SakirBey1 DeveLoper .xd
+# Emoji
 @client.on(events.NewMessage(pattern="^/itag ?(.*)"))
 async def etag(event):
   global anlik_calisan
@@ -158,7 +156,7 @@ async def etag(event):
       usrnum += 1
       usrtxt += f"[{random.choice(cumle)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond("İşlem Başarılı Bir Şekilde Durduruldu ❌ \n ** Daha Fazla Grub Botları İçin @SakirBey1 İle iletişime Geçin...**")
+        await event.respond("İşlem Başarılı Bir Şekilde Durduruldu ❌ \n SakirBey2")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
@@ -176,7 +174,7 @@ async def etag(event):
       usrnum += 1
       usrtxt += f"[{random.choice(cumle)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond("İşlem Başarılı Bir Şekilde Durduruldu ❌ \n ** Daha Fazla Grub Botları İçin @SakirBey1 İle iletişime Geçin...**")
+        await event.respond("İşlem Başarılı Bir Şekilde Durduruldu ❌ \n @SakirBey2")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
@@ -218,7 +216,7 @@ async def nick(event):
       usrnum += 1
       usrtxt += f"[{random.choice(emj)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond("İşlem Başarılı Bir Şekilde Durduruldu ❌ \n ** Daha Fazla Grub Botları İçin @SakirBey1 İle iletişime Geçin...**")
+        await event.respond("İşlem Başarılı Bir Şekilde Durduruldu ❌ \n @SakirBey2")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
@@ -236,7 +234,7 @@ async def nick(event):
       usrnum += 1
       usrtxt += f"[{random.choice(emj)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond("İşlem Başarılı Bir Şekilde Durduruldu ❌ \n ** Daha Fazla Grub Botları İçin @SakirBey1 İle iletişime Geçin...**")
+        await event.respond("İşlem Başarılı Bir Şekilde Durduruldu ❌ \n @SakirBey2")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
@@ -302,13 +300,6 @@ async def mentionall(event):
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
-        
-        
-@client.on_message(filters.command("bagis") & ~filters.edited)
-async def start(_, message):
-    await luna.send_chat_action(message.chat.id, "typing")
-    await sleep(2)
-    await message.reply_text("Bağış mı yapmak istiyorsun bu heyecan verici \nBağış için Sahibim @SakirBey1 yazabilrsin")
-    
+
 print(">> Bot çalıyor merak etme 🚀 @SakirBey1 bilgi alabilirsin <<")
 client.run_until_disconnected()
