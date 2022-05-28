@@ -24,7 +24,7 @@ tekli_calisan = []
 
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
-  await event.reply("**🌀LuciTaggerBot**\n ile Grubunuzdakı Nerdeyse Tüm Üyelere Etiket Ata bilirim \nKomutlar için =======> /help yazın**",
+  await event.reply("**🌀SessizlerTaggerBot**\n ile Grubunuzdakı Nerdeyse Tüm Üyelere Etiket Ata bilirim \nKomutlar için =======> /help yazın**",
                     buttons=(
                    
 		      [Button.url('Beni Gruba Ekle ➕', 'https://t.me/SessiztaggerBot?startgroup=a')],
