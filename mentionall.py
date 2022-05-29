@@ -31,7 +31,7 @@ async def start(event):
 		      [Button.url('Beni Gruba Ekle ➕', 'https://t.me/SessiztaggerBot?startgroup=a')],
                       [Button.url('Support🛠', 'https://t.me/susmayanlaronlinesohbet')],
                       [Button.url('Resmi Kanal📣', 'https://t.me/SakirBey2')],
-		      [Button.url('Developer👨🏻‍💻', 'https://t.me/SakirBey1')],
+		      [Button.url('Developer👨🏻‍💻', 'https://t.me/{Config.bot_username}'],
                     ),
                     link_preview=False
                    )
