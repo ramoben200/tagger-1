@@ -14,6 +14,11 @@
     "API_HASH": {
       "description": "@otomytelegrambot dan api hash api id alınız.",
       "value": ""
+    },
+    "bot_username": {
+      "description": "@BotFather ' den aldığınız botun kullanıcı adını @ olmadan giriniz",
+      "value": ""
+      "required": true
     }
   },
   "buildpacks": [{
