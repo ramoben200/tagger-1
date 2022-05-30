@@ -26,7 +26,7 @@
        "required": true
     },
      "owner": {
-      "description": "Bot Sahibinin Kullanıcı Adı @ Olmadan"
+       "description": "Bot Sahibinin Kullanıcı Adı @ Olmadan"
        "value": ""
        "required": true
     }
