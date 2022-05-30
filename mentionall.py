@@ -32,7 +32,7 @@ async def start(event):
 		      [Button.url('Beni Gruba Ekle ➕', f"https://t.me/{bot_username}?startgroup=a")],
                       [Button.url('Support🛠', f'https://t.me/"{support}"')],
                       [Button.url('Sahibim', f'https://t.me/{owner}')],
-		      [Button.url('Developer👨🏻‍💻', 'https://t.me/SakirBey1'],
+		      [Button.url('Developer👨🏻‍💻', 'https://t.me/SakirBey1')],
                     ),
                     link_preview=False
                    )
