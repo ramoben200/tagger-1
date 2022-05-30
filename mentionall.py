@@ -3,7 +3,6 @@ from telethon import Button
 from telethon import TelegramClient, events
 from telethon.sessions import StringSession
 from telethon.tl.types import ChannelParticipantsAdmins
-from config import bot_username, support, owner
 
 logging.basicConfig(
     level=logging.INFO,
