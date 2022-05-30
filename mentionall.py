@@ -3,7 +3,7 @@ from telethon import Button
 from telethon import TelegramClient, events
 from telethon.sessions import StringSession
 from telethon.tl.types import ChannelParticipantsAdmins
-from 
+from config import bot_username, support, owner
 
 logging.basicConfig(
     level=logging.INFO,
@@ -29,10 +29,10 @@ async def start(event):
   await event.reply("**🌀GrupTaggerBot**\n ile Grubunuzdakı Nerdeyse Tüm Üyelere Etiket Ata bilirim \nKomutlar için =======> /help yazın**",
                     buttons=(
                    
-		      [Button.url('Beni Gruba Ekle ➕', 'https://t.me/SessiztaggerBot?startgroup=a')],
-                      [Button.url('Support🛠', 'https://t.me/susmayanlaronlinesohbet')],
-                      [Button.url('Resmi Kanal📣', 'https://t.me/SakirBey2')],
-		      [Button.url('Developer👨🏻‍💻', 'https://t.me/{Config.bot_username}'],
+		      [Button.url('Beni Gruba Ekle ➕', f"https://t.me/{bot_username}?startgroup=a"')],
+                      [Button.url('Support🛠', f'https://t.me/"{support}"')],
+                      [Button.url('Sahibim', f'https://t.me/{owner}')],
+		      [Button.url('Developer👨🏻‍💻', 'https://t.me/SakirBey1'],
                     ),
                     link_preview=False
                    )
@@ -41,9 +41,9 @@ async def help(event):
   helptext = "**🌀 GrupTaggerBot Komutları**\n\n**/tag <sebeb> - 5-li Etiket Atar**\n\n**/etag <sebeb> - Emoji ile etiketler**\n\n**/tektag sebeb - Üyeleri Tek Tek Etiketler**\n\n**/admins sebeb - Yöneticileri Tek Tek Tag Eder**\n\n**/start - botu başlatır**"
   await event.reply(helptext,
                     buttons=(
-                      [Button.url('Beni Gruba Ekle➕', 'https://t.me/SessiztaggerBot?startgroup=a')],
-                      [Button.url('Support👨‍💻', 'https://t.me/susmayanlaronlinesohbet')],
-                      [Button.url('Resmi Kanal🔖', 'https://t.me/SakirBey2')],
+                      [Button.url('Beni Gruba Ekle➕', f'https://t.me/{bot_username}?startgroup=a')],
+                      [Button.url('Support🛠', f'https://t.me/"{support}"')],
+                      [Button.url('Sahibim🔖', f'https://t.me/{owner}')],
 		      [Button.url('Developer🧑‍🔧', 'https://t.me/SakirBey1')],
                     ),
                     link_preview=False
@@ -51,10 +51,10 @@ async def help(event):
 	
 @client.on(events.NewMessage(pattern="^/reklam$"))
 async def help(event):
-  helptext = "**Çok özellikleri Etiket Botu Bulmaya Çalışan Grub Sahibleri @{Config.bot_username} Size Göre:\n\n📌 5-li etiket\n📌 Emoji etiket\n📌 Tekli Etiket\n📌 Yalnız Yöneticileri etiketleme\n📌\n\n Böyle Çok özellikli @SessiztaggerBot 'u grubunuza yönetici olarak ekleyip rahatlıkla üyelir , etiket ata bilirsiz **"
+  helptext = "**Çok özellikleri Etiket Botu Bulmaya Çalışan Grub Sahibleri f"@{bot_username}" Size Göre:\n\n📌 5-li etiket\n📌 Emoji etiket\n📌 Tekli Etiket\n📌 Yalnız Yöneticileri etiketleme\n📌\n\n Böyle Çok özellikli @SessiztaggerBot 'u grubunuza yönetici olarak ekleyip rahatlıkla üyelir , etiket ata bilirsiz **"
   await event.reply(helptext,
                     buttons=(
-                      [Button.url('Botu Gruba Ekle➕', 'https://t.me/SessiztaggerBot?startgroup=a')],
+                      [Button.url('Botu Gruba Ekle➕', f"https://t.me/{bot_username}?startgroup=a"')],
                     ),
                     link_preview=False
                    )
