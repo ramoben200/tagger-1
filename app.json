@@ -19,6 +19,16 @@
       "description": "@BotFather ' den aldığınız botun kullanıcı adını @ olmadan giriniz",
       "value": ""
       "required": true
+    },
+     "support": {
+       "description": "Botunuzun Destek Grubunun Linkini Örn; herlocksupport Şeklinde Giriniz",
+       "value": ""
+       "required": true
+    },
+     "owner": {
+      "description": "Bot Sahibinin Kullanıcı Adı @ Olmadan"
+       "value": ""
+       "required": true
     }
   },
   "buildpacks": [{
