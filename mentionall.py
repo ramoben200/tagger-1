@@ -29,7 +29,7 @@ async def start(event):
   await event.reply("**🌀GrupTaggerBot**\n ile Grubunuzdakı Nerdeyse Tüm Üyelere Etiket Ata bilirim \nKomutlar için =======> /help yazın**",
                     buttons=(
                    
-		      [Button.url('Beni Gruba Ekle ➕', f"https://t.me/{bot_username}?startgroup=a"')],
+		      [Button.url('Beni Gruba Ekle ➕', f"https://t.me/{bot_username}?startgroup=a")],
                       [Button.url('Support🛠', f'https://t.me/"{support}"')],
                       [Button.url('Sahibim', f'https://t.me/{owner}')],
 		      [Button.url('Developer👨🏻‍💻', 'https://t.me/SakirBey1'],
