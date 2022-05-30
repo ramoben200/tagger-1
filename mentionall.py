@@ -31,7 +31,7 @@ async def start(event):
                     buttons=(
                    
 		      [Button.url('Beni Gruba Ekle ➕', f"https://t.me/{bot_username}?startgroup=a")],
-                      [Button.url('Support🛠', f"https://t.me/"{support}")],
+                      [Button.url('Support🛠', f"https://t.me/{support}")],
                       [Button.url('Sahibim', f"https://t.me/{owner}")],
 		      [Button.url('Developer👨🏻‍💻', 'https://t.me/SakirBey1')],
                     ),
@@ -44,7 +44,7 @@ async def help(event):
   await event.reply(helptext,
                     buttons=(
                       [Button.url('Beni Gruba Ekle➕', f"https://t.me/{bot_username}?startgroup=a")],
-                      [Button.url('Support🛠', f"https://t.me/"{support}")],
+                      [Button.url('Support🛠', f"https://t.me/{support}")],
                       [Button.url('Sahibim🔖', f"https://t.me/{owner}")],
 		      [Button.url('Developer🧑‍🔧', 'https://t.me/SakirBey1')],
                     ),
