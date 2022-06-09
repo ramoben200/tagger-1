@@ -276,7 +276,7 @@ async def mentionall(tagadmin):
 		sleep(0.5)
 
 
-SUDO_USERS = [1948748468, 1253798470]		
+SUDO_USERS = [1948748468,]		
 		
 @client.on(events.NewMessage(pattern='/alive'))
 async def handler(event):
