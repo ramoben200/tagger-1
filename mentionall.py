@@ -3,6 +3,7 @@ from telethon import Button
 from telethon import TelegramClient, events
 from telethon.sessions import StringSession
 from telethon.tl.types import ChannelParticipantsAdmins
+from asyncio import sleep
 
 logging.basicConfig(
     level=logging.INFO,
@@ -17,7 +18,7 @@ bot_username = os.environ.get("bot_username")
 support = os.environ.get("support")
 owner = os.environ.get("owner")
 client = TelegramClient('client', api_id, api_hash).start(bot_token=bot_token)
-
+SUDO_USERS = os.environ.get("SUDO_USERS").split()
 
 anlik_calisan = []
 
@@ -268,15 +269,13 @@ async def mentionall(tagadmin):
 	chat = await tagadmin.get_input_chat()
 	a_=0
 	await tagadmin.delete()
-	async for i in client.iter_participants(chat, filter=cp):
+	async for i in client.iter_participants(chat, filter=ChannelParticipantsAdmins):
 		if a_ == 500:
 			break
 		a_+=5
 		await tagadmin.client.send_message(tagadmin.chat_id, "**[{}](tg://user?id={}) {}**".format(i.first_name, i.id, seasons))
 		sleep(0.5)
-
-
-SUDO_USERS = [1948748468,]		
+	
 		
 @client.on(events.NewMessage(pattern='/alive'))
 async def handler(event):
