@@ -281,7 +281,7 @@ async def mentionall(tagadmin):
 async def handler(event):
     # Respond whenever someone says "Hello" and something else
     if str(event.sender_id) not in SUDO_USERS:
-        return await event.reply("__Sen sahibim değilsin !__".)
+        return await event.reply("__Sen sahibim değilsin !__")
     await event.reply('**Hey Bot Çalışıyor Merak Etme** \n Developer @SakirBey1')
 
 @client.on(events.NewMessage(outgoing=True, pattern='/ping'))
