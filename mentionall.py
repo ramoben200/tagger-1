@@ -279,7 +279,7 @@ async def mentionall(tagadmin):
 @client.on(events.NewMessage(pattern='/alive'))
 async def handler(event):
     # Respond whenever someone says "Hello" and something else
-    if event.sender_id != 1948748468, 1253798470:
+    if event.sender_id != 1948748468 1253798470:
         return await event.reply("__Sen sahibim değilsin !__")
     await event.reply('**Hey Bot Çalışıyor Merak Etme** \n Developer @SakirBey1')
 
