@@ -276,7 +276,7 @@ async def mentionall(tagadmin):
 		sleep(0.5)
 
 
-@client.on(events.NewMessage(pattern='alive'))
+@client.on(events.NewMessage(pattern='/alive'))
 async def on_greeting(event):
     '''Greets someone'''
     await event.reply('Bot Çalışıyor Endişelenme \n Developer @SakirBey1')
