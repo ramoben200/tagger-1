@@ -64,13 +64,13 @@ emoji = "🐵 🦁 🐯 🐱 🐶 🐺 🐻 🐨 🐼 🐹 🐭 🐰 🦊 🦝 �
 async def mentionall(event):
   global anlik_calisan
   if event.is_private:
-    return await event.respond("**Bu komutu gruplar ve kanallar için geçerli❗**")
+    return await event.respond("**Bu komutu gruplar ve kanallar için geçerli❗** \n@SakirBey2 ☄️")
   
   admins = []
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
     admins.append(admin.id)
   if not event.sender_id in admins:
-    return await event.respond("**Bu komutu sadace yoneticiler kullana bilir〽️**")
+    return await event.respond("**Bu komutu sadace yoneticiler kullana bilir〽️** \n@SakirBey2 ☄️")
   
   if event.pattern_match.group(1):
     mode = "text_on_cmd"
@@ -130,13 +130,13 @@ async def cancel(event):
 async def mentionall(event):
   global anlik_calisan
   if event.is_private:
-    return await event.respond("Bu komutu gruplar ve kanallar için geçerli❗️**")
+    return await event.respond("**Bu komutu gruplar ve kanallar için geçerli❗️** \n @SakirBey2 ☄️")
   
   admins = []
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
     admins.append(admin.id)
   if not event.sender_id in admins:
-    return await event.respond("**Bu komutu sadace yoneticiler kullana bilir〽️**")
+    return await event.respond("**Bu komutu sadace yoneticiler kullana bilir〽️** \n @SakirBey2 ☄️")
   
   if event.pattern_match.group(1):
     mode = "text_on_cmd"
@@ -195,7 +195,7 @@ async def cancel(event):
 async def mentionall(event):
   global tekli_calisan
   if event.is_private:
-    return await event.respond("**Bu komutu gruplar ve kanallar için geçerli❗️**")
+    return await event.respond("**Bu komutu gruplar ve kanallar için geçerli❗️** \n @SakirBey2 ☄️")
   
   admins = []
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
