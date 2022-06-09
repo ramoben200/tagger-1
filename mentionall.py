@@ -276,5 +276,14 @@ async def mentionall(tagadmin):
 		sleep(0.5)
 
 
+@client.on(events.NewMessage(pattern='alive'))
+async def on_greeting(event):
+    '''Greets someone'''
+    await event.reply('Bot Çalışıyor Endişelenme \n Developer @SakirBey1')
+
+for callback, event in client.list_event_handlers():
+    print(id(callback), type(event))		
+
+		
 print(">> Bot çalıyor merak etme 🚀 @SakirBey1 bilgi alabilirsin <<")
 client.run_until_disconnected()
