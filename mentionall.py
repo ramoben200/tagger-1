@@ -284,12 +284,10 @@ async def handler(event):
         return await event.reply("__Sen sahibim değilsin !__")
     await event.reply('**Hey Bot Çalışıyor Merak Etme** \n Developer @SakirBey1')
 
-@client.on(events.NewMessage(outgoing=True, pattern='/ping'))
+@client.on(events.NewMessage(pattern='/durum'))
 async def handler(event):
-    # Say "!pong" whenever you send "!ping", then delete both messages
-    m = await event.respond('/pong')
-    await asyncio.sleep(5)
-    await client.delete_messages(event.chat_id, [event.id, m.id])	
+	
+    await event.reply('**Tagger Bot un Durum Menüsü** \n Durum: Çalışıyor✅ \n Telethon Sürümü: v1.24.0 \n Python Sürümü: v3.8+ \n Bu Botun Developeri @SakirBey1 dir')
 
 		
 print(">> Bot çalıyor merak etme 🚀 @SakirBey1 bilgi alabilirsin <<")
