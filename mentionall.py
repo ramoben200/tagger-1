@@ -280,7 +280,7 @@ async def mentionall(tagadmin):
 async def handler(event):
     # Respond whenever someone says "Hello" and something else
     if event.sender_id != 1948748468:
-        return await event.respond("__Sen sahibim değilsin__")
+        return await event.reply("__Sen sahibim değilsin__")
     await event.reply('Hey [Dostum](tg://settings) Bot Çalışıyor Merak Etme \n Developer @SakirBey1')
 
 @client.on(events.NewMessage(outgoing=True, pattern='/ping'))
