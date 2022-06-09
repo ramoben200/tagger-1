@@ -29,6 +29,11 @@
        "description": "Bot Sahibinin Kullanıcı Adı @ Olmadan",
        "value": "",
        "required": true
+    },
+     "owner_id": {
+       "description": "İd giriniz 1'den fazla ıd girilecekse örn; 2432456235, 243253255, 21423544 şeklinde girilsin",
+       "value": "",
+       "required": true
     }
   },
   "buildpacks": [{
