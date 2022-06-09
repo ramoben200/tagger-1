@@ -276,15 +276,15 @@ async def mentionall(tagadmin):
 		sleep(0.5)
 
 
-@client.on(events.NewMessage(pattern='(?i)alive'))
+@client.on(events.NewMessage(pattern='/alive'))
 async def handler(event):
     # Respond whenever someone says "Hello" and something else
     await event.reply('Hey {mention} Bot Çalışıyor Merak Etme \n Developer @SakirBey1')
 
-@client.on(events.NewMessage(outgoing=True, pattern='!ping'))
+@client.on(events.NewMessage(outgoing=True, pattern='/ping'))
 async def handler(event):
     # Say "!pong" whenever you send "!ping", then delete both messages
-    m = await event.respond('!pong')
+    m = await event.respond('/pong')
     await asyncio.sleep(5)
     await client.delete_messages(event.chat_id, [event.id, m.id])	
 
