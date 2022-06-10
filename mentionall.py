@@ -41,7 +41,7 @@ async def start(event):
 
 @client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
-  helptext = "**🌀 GrupTaggerBot Komutları**\n\n**/tag <sebeb> - 5-li Etiket Atar**\n\n**/etag <sebeb> - Emoji ile etiketler**\n\n**/tektag sebeb - Üyeleri Tek Tek Etiketler**\n\n**/admins sebeb - Yöneticileri Tek Tek Tag Eder**\n\n**/start - botu başlatır**\n /bagis : **Bağış Yapmak İstersen Basa Bilirsin.**"
+  helptext = "**🌀 GrupTaggerBot Komutları**\n\n**/tag <sebeb> - 5-li Etiket Atar**\n\n**/etag <sebeb> - Emoji ile etiketler**\n\n**/tektag sebeb - Üyeleri Tek Tek Etiketler**\n\n**/admins sebeb - Yöneticileri Tek Tek Tag Eder**\n\n**/start - botu başlatır**\n \n/bagis : **Bağış Yapmak İstersen Basa Bilirsin.**"
   await event.reply(helptext,
                     buttons=(
                       [Button.url('Beni Gruba Ekle➕', f"https://t.me/{bot_username}?startgroup=a")],
