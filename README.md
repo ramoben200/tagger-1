@@ -5,7 +5,7 @@ _**Bu bot, gruplarda 10.000'e kadar üyeden bahsedebilir ve kanallarda 200'e kad
 
 ### 🗂 Bilgi
 - Dil: Python.
-- Telgraf Kütüphanesi: Telethon.
+- Telgraf Kütüphanesi: Telethon & Pyrogram İlk Ve Tek.
 - [Developer](https://t.me/SakirBey2)✨
 
 ### 🚀 Deploy to heroku
@@ -19,16 +19,4 @@ _**Bu bot, gruplarda 10.000'e kadar üyeden bahsedebilir ve kanallarda 200'e kad
 
 
 
-# App.json
 
-``` TOKEN = ``` [BotFather](https://t.me/BotFather)'den ```Aldığınız tokeni Girin```
-
-``` APP_ID = ``` [Telegram Adresinden Alın](https://my.telegram.org/auth) 
-
-``` API_HASH = ``` [Telegram Adresinden Alın](https://my.telegram.org/auth)
-
-``` bot_username = ``` [BotFather](https://t.me/BotFather)'den ```Oluşturduğunuz Botun Kullanıcı Adını @ Olmadan Giriniz.```
-
-``` support = Botunuzun Destek Grubunun Linkini Örn; herlocksupport Şeklinde Giriniz```
-
-```owner = Bot Sahibin Kullanıcı Adını Giriniz @ Olmadan```
