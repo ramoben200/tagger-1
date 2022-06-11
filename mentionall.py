@@ -41,7 +41,7 @@ async def start(event):
 
 @client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
-  helptext = "**🌀 GrupTaggerBot Komutları**\n\n**/tag <sebeb> - 5-li Etiket Atar**\n\n**/etag <sebeb> - Emoji ile etiketler**\n\n**/tektag sebeb - Üyeleri Tek Tek Etiketler**\n\n**/admins sebeb - Yöneticileri Tek Tek Tag Eder**\n\n**/start - botu başlatır**\n \n/durum - Botun Durumunu Gösterir \n\n/bagis : **Bağış Yapmak İstersen Basa Bilirsin.**"
+  helptext = "**🌀 GrupTaggerBot Komutları**\n\n**/tag <sebeb> - 5-li Etiket Atar**\n\n**/etag <sebeb> - Emoji ile etiketler**\n\n**/tektag sebeb - Üyeleri Tek Tek Etiketler**\n\n**/admins sebeb - Yöneticileri Tek Tek Tag Eder**\n\n**/start - botu başlatır**\n \n/durum - Botun Durumunu Gösterir \n\n/bagis : **Bağış Yapmak İstersen Basa Bilirsin.** \n \n /reklam - **Reklam Veya İş Birliği İçin Bu Komutu Kullanın.**"
   await event.reply(helptext,
                     buttons=(
                       [Button.url('Beni Gruba Ekle➕', f"https://t.me/{bot_username}?startgroup=a")],
@@ -293,6 +293,11 @@ async def handler(event):
 async def handler(event):
 	
     await event.reply('**Tagger Botun Bağış Menüsü** \n\nPapara No: 1744892543 \n\n  ✨')
+
+@client.on(events.NewMessage(pattern='/reklam'))
+async def handler(event):
+	
+    await event.reply('__Botun Reklam Menüsü__\n**Reklam Veya İş Birliğimi Yapmak İstiyorsunuz Botun** [Sahibi](https://t.me/SakirBey1) **İle İletişime Geçiniz**')
 
 print(">> Bot çalıyor merak etme 🚀 @SakirBey1 bilgi alabilirsin <<")
 client.run_until_disconnected()
