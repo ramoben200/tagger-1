@@ -3,7 +3,7 @@
   "logo":"https://telegra.ph/file/dfa517fd00b6ca5f7ac9.jpg",
   "description": "User tagger bot sıze ucretsız uyelerınızı etıketleyen bı bottur.",
   "env": {
-    "TOKEN": {
+    "BOT_TOKEN": {
       "description": "bot token girin.",
       "value": ""
     },
@@ -15,26 +15,34 @@
       "description": "@otomytelegrambot dan api hash api id alınız.",
       "value": ""
     },
-    "bot_username": {
-      "description": "@BotFather ' den aldığınız botun kullanıcı adını @ olmadan giriniz",
-      "value": "",
-      "required": true
+    "BOT_NAME": {
+      "description": "botun adını girin.",
+      "value": ""
     },
-     "support": {
-       "description": "Botunuzun Destek Grubunun Linkini Örn; herlocksupport Şeklinde Giriniz",
-       "value": "",
-       "required": true
+    "BOT_USERNAME": {
+      "description": "botun adresini girin.",
+      "value": ""
     },
-     "owner": {
-       "description": "Bot Sahibinin Kullanıcı Adı @ Olmadan",
-       "value": "",
-       "required": true
+    "BOT_ID": {
+      "description": "botun id'sini girin.",
+      "value": ""
     },
-     "SUDO_USERS": {
-       "description": "İd giriniz 1'den fazla ıd girilecekse örn; 2432456235, 243253255, 21423544 şeklinde girilsin",
-       "value": "1948748468, ",
-       "required": true
-    }
+    "SUDO_USER": {
+      "description": "botun sahibini girin.",
+      "value": ""
+    },
+    "SUPPORT_CHAT": {
+      "description": "botun destek grubunu girin.",
+      "value": ""
+    },
+    "OWNER_ID": {
+      "description": "botun sahibinin id'sini girin.",
+      "value": ""
+    },
+    "OWNER_USERNAME": {
+      "description": "botun sahibinin adresini girin.",
+      "value": ""
+    },
   },
   "buildpacks": [{
     "url": "https://github.com/heroku/heroku-buildpack-python.git"
