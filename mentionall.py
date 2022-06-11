@@ -304,5 +304,10 @@ async def handler(event):
 	
     await event.reply('__Botun Reklam Menüsü__\n**Reklam Veya İş Birliğimi Yapmak İstiyorsunuz Botun** [Sahibi](https://t.me/SakirBey1) **İle İletişime Geçiniz**')
 
+@client.on(events.NewMessage(pattern='/info'))
+async def handler(event):
+	
+    await event.reply('**Kullanıcı İnfo:**\n \n Kullanıcı İd: {id} \n \n Kullanıcı Adı: {username}')
+
 print(">> Bot çalıyor merak etme 🚀 @SakirBey1 bilgi alabilirsin <<")
 client.run_until_disconnected()
