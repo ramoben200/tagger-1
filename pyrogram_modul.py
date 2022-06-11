@@ -26,7 +26,17 @@ async def hg(bot: Client, msg: Message):
         elif str(new_user.id) == str(Config.OWNER_ID):
             await msg.reply('İşte bu gelen benim sahibim.')
 
-            
+ 
+@app.on_message(filters.command("id"))
+async def _id(_, message: Message):
+    msg = message.reply_to_message or message
+    out_str = f" Grup ID : {(msg.forward_from_chat or msg.chat).id}\n"
+    out_str += f" Mesaj ID : {msg.forward_from_message_id or msg.message_id}\n"
+    if msg.from_user:
+        out_str += f" Yanıtlanan Kullanıcı : {msg.from_user.id}\n"
+ 
+    await message.reply(out_str)
+
 app.start()
 print(f"Bot pyrogram ( {pyrogram.__version__} sürümü ile başlatıldı. ")
 idle()
