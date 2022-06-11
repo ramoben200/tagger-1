@@ -14,12 +14,12 @@ app = Client(
 
 @app.on_message(filters.command("start"))
 async def _py(client: Client, message: Message):
-    message.reply_text('Pyrogram is a Python library for Telegram bots.')
+    await message.reply_text('Pyrogram is a Python library for Telegram bots.')
 
 @Client.on_message(filters.new_chat_members, group=1)
 async def hg(bot: Client, msg: Message):
     for new_user in msg.new_chat_members:
-        if str(new_user.id) == str(Config.BOT_ID):
+        if new_user.id == Config.BOT_ID:
             await msg.reply(
                 f'''`Hey {msg.from_user.mention} beni {msg.chat.title} grubuna eklediğin için teşekkürler⚡️`
 
