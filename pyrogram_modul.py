@@ -26,17 +26,6 @@ async def hg(bot: Client, msg: Message):
         elif str(new_user.id) == str(Config.OWNER_ID):
             await msg.reply('İşte bu gelen benim sahibim.')
 
-@app.on_message(filters.command("info")
-async def info(b, m):
-    text = """Kullanıcı İnfo:
- 
- Kullanıcı İd: {} 
- 
- Kullanıcı Adı: {}"""
-
-    if not m.reply_to_msg:
-        return
-    await m.reply(text.format(m.reply_to_msg.from_user.id, m.reply_to_msg.from_user.username)
             
 app.start()
 print(f"Bot pyrogram ( {pyrogram.__version__} sürümü ile başlatıldı. ")
