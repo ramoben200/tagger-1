@@ -9,7 +9,7 @@ class Config():
     BOT_TOKEN = os.environ.get("BOT_TOKEN")
     BOT_USERNAME = os.environ.get("BOT_USERNAME")
     BOT_NAME = os.environ.get("BOT_NAME")
-    BOT_ID = os.environ.get("BOT_ID")
+    BOT_ID = int(os.environ.get("BOT_ID"))
     SUDO_USERS = os.environ.get("SUDO_USERS").split()
     SUPPORT_CHAT = os.environ.get("SUPPORT_CHAT")
     OWNER_ID = int(os.environ.get("OWNER_ID"))
