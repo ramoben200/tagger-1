@@ -7,7 +7,7 @@
       "description": "bot token girin.",
       "value": ""
     },
-    "APP_ID": {
+    "API_ID": {
       "description": "@otomytelegrambot dan api hash api id alınız.",
       "value": ""
     },
@@ -27,7 +27,7 @@
       "description": "botun id'sini girin.",
       "value": ""
     },
-    "SUDO_USER": {
+    "SUDO_USERS": {
       "description": "botun sahibini girin.",
       "value": ""
     },
@@ -42,7 +42,7 @@
     "OWNER_USERNAME": {
       "description": "botun sahibinin adresini girin.",
       "value": ""
-    },
+    }
   },
   "buildpacks": [{
     "url": "https://github.com/heroku/heroku-buildpack-python.git"
