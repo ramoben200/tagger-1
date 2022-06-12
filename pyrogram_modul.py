@@ -30,7 +30,7 @@ async def hg(bot: Client, msg: Message):
 @app.on_message(filters.command("id"))
 async def _id(_, message: Message):
     msg = message.reply_to_message or message
-    out_str = "**User İnfo:**"
+    out_str = "**User İnfo:**\n"
     out_str += f" ⚡️Grup ID : {(msg.forward_from_chat or msg.chat).id}\n"
     out_str += f" 💬Mesaj ID : {msg.forward_from_message_id or msg.message_id}\n"
     if msg.from_user:
