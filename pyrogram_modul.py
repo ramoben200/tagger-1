@@ -39,6 +39,18 @@ async def _id(_, message: Message):
  
     await message.reply(out_str)
 
+ @app.on_message(filters.command("info"))
+async def _id(_, message: Message):
+    msg = message.reply_to_message or message
+    out_str = "**User İnfo:**\n"
+    out_str += f" ⚡️ __Grup ID__ : `{(msg.forward_from_chat or msg.chat).id}`\n"
+    out_str += f" 💎 __Yanıtlanan Kullanıcı Adı__ : {msg.from_user.first_name}\n"
+    out_str += f" 💬 __Mesaj ID__ : `{msg.forward_from_message_id or msg.message_id}`\n"
+    if msg.from_user:
+        out_str += f" 🙋🏻‍♂️ __Yanıtlanan Kullanıcı ID__ : `{msg.from_user.id}`\n"
+ 
+    await message.reply(out_str)
+
 app.start()
 print(f"Bot pyrogram ( {pyrogram.__version__} sürümü ile başlatıldı. ")
 idle()
