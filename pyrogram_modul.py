@@ -39,7 +39,7 @@ async def _id(_, message: Message):
  
     await message.reply(out_str)
 
- @app.on_message(filters.command("info"))
+@app.on_message(filters.command("info"))
 async def _id(_, message: Message):
     msg = message.reply_to_message or message
     out_str = "**User İnfo:**\n"
