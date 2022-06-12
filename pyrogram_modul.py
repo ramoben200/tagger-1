@@ -52,7 +52,7 @@ async def _id(_, message: Message):
     await message.reply(out_str)
 
 @app.on_message(filters.command("ping"))
-async def pingy(client, message):
+async def ping(client, message):
 
     start = datetime.now()
     hmm = await message.reply("Pong!")
