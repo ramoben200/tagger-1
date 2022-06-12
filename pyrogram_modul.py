@@ -60,7 +60,7 @@ async def pingy(client, message):
     ms = (end - start).microseconds / 1000
     await clean_mode(message)
     await hmm.edit(
-        f"█▀█ █▀█ █▄░█ █▀▀ █ \n█▀▀ █▄█ █░▀█ █▄█ ▄",
+        f"█▀█ █▀█ █▄░█ █▀▀ █ \n█▀▀ █▄█ █░▀█ █▄█ ▄"),
     
 app.start()
 print(f"Bot pyrogram ( {pyrogram.__version__} sürümü ile başlatıldı. ")
