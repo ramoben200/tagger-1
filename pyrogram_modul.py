@@ -58,7 +58,6 @@ async def pingy(client, message):
     hmm = await message.reply("Pong!")
     end = datetime.now()
     ms = (end - start).microseconds / 1000
-    await clean_mode(message)
     await hmm.edit(
         f"█▀█ █▀█ █▄░█ █▀▀ █ \n█▀▀ █▄█ █░▀█ █▄█ ▄"),
     
