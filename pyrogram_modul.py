@@ -53,12 +53,10 @@ async def _id(_, message: Message):
 
 @app.on_message(filters.command("ping"))
 async def pingy(client, message):
-
     start = datetime.now()
     hmm = await message.reply("Pong!")
     end = datetime.now()
     ms = (end - start).microseconds / 1000
-    await clean_mode(message)
     await hmm.edit(
         f"█▀█ █▀█ █▄░█ █▀▀ █ \n█▀▀ █▄█ █░▀█ █▄█ ▄\nPing: {round(ms)}")
     
