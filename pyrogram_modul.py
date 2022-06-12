@@ -2,7 +2,7 @@ from pyrogram import Client, filters, idle
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 import pyrogram
 from Config import Config
-
+from datetime import datetime
 
 
 app = Client(
@@ -52,7 +52,7 @@ async def _id(_, message: Message):
     await message.reply(out_str)
 
 @app.on_message(filters.command("ping"))
-async def ping(client, message):
+async def pingy(client, message):
 
     start = datetime.now()
     hmm = await message.reply("Pong!")
@@ -60,7 +60,7 @@ async def ping(client, message):
     ms = (end - start).microseconds / 1000
     await clean_mode(message)
     await hmm.edit(
-        f"█▀█ █▀█ █▄░█ █▀▀ █ \n█▀▀ █▄█ █░▀█ █▄█ ▄\nPing: {round(ms)}") 
+        f"█▀█ █▀█ █▄░█ █▀▀ █ \n█▀▀ █▄█ █░▀█ █▄█ ▄",
 
 app.start()
 print(f"Bot pyrogram ( {pyrogram.__version__} sürümü ile başlatıldı. ")
