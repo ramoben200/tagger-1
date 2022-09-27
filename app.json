@@ -1,7 +1,7 @@
 {
-  "name": "Telegram Mention TaggerBot",
+  "name": "Telegram Mention UtagBot",
   "logo":"https://telegra.ph/file/dfa517fd00b6ca5f7ac9.jpg",
-  "description": "User tagger bot sıze ucretsız uyelerınızı etıketleyen bı bottur.",
+  "description": "User Utag bot sıze ucretsız uyelerınızı etıketleyen bı bottur.",
   "env": {
     "BOT_TOKEN": {
       "description": "bot token girin.",
