@@ -287,7 +287,7 @@ async def handler(event):
     # Respond whenever someone says "Hello" and something else
     if str(event.sender_id) not in SUDO_USERS:
         return await event.reply("__Sen sahibim değilsin !__")
-    await event.reply('**Hey Bot Çalışıyor Merak Etme** \n Developer @SakirBey1')
+    await event.reply('**Hey Bot Çalışıyor Merak Etme** \n Developer @BOT_RAMO')
 
 @client.on(events.NewMessage(pattern='/durum'))
 async def handler(event):
